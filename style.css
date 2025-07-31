@@ -1,0 +1,221 @@
+/* Reset default spacing and fonts */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.9 em;
+  background-color: #fdfdfd;
+  color: #333;
+  line-height: 1.0;
+  animation: fadeInBody 1.5s ease-in; /* Body fade-in animation */
+}
+
+
+/* Header styles */
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #b591b0e1;
+  color: #222;
+  animation: fadeInSlideDown 1s ease-in-out;
+
+}
+/* Headings: Poppins */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  display: flex; /* Horizontal layout */
+  justify-content: center; /* Center the links */
+  background-color: #645741; /* Yellow background */
+  padding: 10px 0;
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+}
+
+.navbar li {
+  margin: 0 15px; /* Spacing between links */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #c3b398; /* Darker yellow on hover */
+  border-radius: 5px;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Container to center only the body section */
+.container {
+  max-width: 1500px;
+  margin: 0 auto; /* Center horizontally */
+  padding: 0 20px; /* Padding on the sides */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* <-- This adds the soft shadow */
+  border-radius: 8px; /* Optional: round corners */
+}
+/* Section container styling */
+section {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 5px;
+  background-color: #fffbe6;
+  animation: fadeInUp 1s ease-in;
+}
+
+/* Target text inside sections */
+section p, section li {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* On section hover, move text slightly up and fade in */
+section:hover p,
+section:hover li {
+  transform: translateY(-5px);
+  opacity: 0.95;
+}
+/* Section headings */
+h2 {
+  color: #5c492b;
+}
+
+/* Image styling */
+img {
+  border-radius: 6px;
+  margin-top: 15px;
+  max-width: 250px;
+  height: auto;
+  animation: fadeIn 2s ease-in;
+}
+
+/* Images in sections */
+section img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* On hover, zoom image slightly and brighten */
+section:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+/* Link styles */
+a {
+  text-decoration: none;
+  color: #1565c0;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0d47a1;
+}
+
+
+/* Hover effect on sections */
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+/* Footer styling */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #eeeeee;
+  animation: fadeIn 1.5s ease-in;
+}
+
+/* Contact form input styling */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 50%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: box-shadow 0.3s;
+}
+
+/* Add focus effect */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  box-shadow: 0 0 5px #f9a825;
+  outline: none;
+}
+
+/* Submit button styling with animation */
+input[type="submit"] {
+  background-color: #f9a825;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+}
+
+/* Project list item hover animation */
+#projects li {
+  transition: background-color 0.3s, transform 0.3s;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#projects li:hover {
+  background-color: #fff3cd;
+  transform: translateX(5px);
+}
+
+/* === Animations Definitions === */
+
+/* Fade in body content */
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Slide down for header */
+@keyframes fadeInSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in and slide up for sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Standard fade-in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
